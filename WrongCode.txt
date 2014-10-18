@@ -1,0 +1,1 @@
+import java.io.*;class main{public static void main(String[]args){int [] ar=new int[100];BufferedRader br= new BufferedReader(new FileRader("INPUT.txt"));int i=0;while(i<=ar.lenght){ar[i]=br.readLine();i++;}}}
