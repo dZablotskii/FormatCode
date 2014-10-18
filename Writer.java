@@ -5,7 +5,7 @@ import java.io.*;
 class Writer{
 	private static BufferedWriter bw;
 	public static void ini()throws IOException{
-		bw= new BufferedWriter(new FileWriter("True.txt"));
+		bw= new BufferedWriter(new FileWriter("TrueCode.txt"));
 	}
 	public void writeFile(String s)throws IOException{
 		try{
