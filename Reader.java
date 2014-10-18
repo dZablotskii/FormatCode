@@ -6,7 +6,7 @@ class Reader{
 	private static BufferedReader br;
 	private static int code;
 	public static void ini()throws IOException{
-		br= new BufferedReader(new FileReader("t.txt"));
+		br= new BufferedReader(new FileReader("WrongCode.txt"));
 	}
 	public static char readFile() throws IOException {
 		code = br.read();
