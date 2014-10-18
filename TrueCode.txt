@@ -8,6 +8,10 @@ class main{
                         ar[i] = br.readLine();
                         i +  + ;
                         
+                }if(i< = 0){
+                        String s = "HelloWorld!";
+                        Syste.out.println(s);
+                        
                 }
         }
 }
