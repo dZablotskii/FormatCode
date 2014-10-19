@@ -1,6 +1,7 @@
 class Format implements InterfaceFormat{
 	private static int spaces=0;
-	public String check(char c){
+	private static boolean comment = false;
+	public String check(char prev,char c,char post){
 		String result="";
 		if(c==';'){
 			String sp="";
@@ -25,7 +26,23 @@ class Format implements InterfaceFormat{
 		}else if((c=='=')||(c=='+')||(c=='-')){
 				result=result+" "+c+" ";	
 			}
-		   else {
+		   else if(c=='\n'){
+			result = result;
+		} else if((prev=='/')&(c=='*')){
+			comment = true;
+			result = result+c+'\n';
+		}else if((comment==true)&(c=='*')){
+			result = result+'\n'+c;
+		}else if((prev=='*')&(c=='/')){
+			String spc="";
+			for(int i=1;i<=spaces;i++){
+				spc=spc+" ";
+			}
+			result = result+c+'\n'+'\n'+spc;
+			comment = false;
+		}else if((c=='/')&(post=='*')) {
+			result = result+'\n'+c;
+		}else {
 			result = result+c;
 		}
 		return result;
