@@ -1,4 +1,4 @@
 interface InterfaceFormat{
-	String check(char c);
+	String check(char prev,char c,char post);
 	int getSpaces();
 }
