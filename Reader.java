@@ -8,7 +8,7 @@ class Reader{
 	public static void ini()throws IOException{
 		br= new BufferedReader(new FileReader("WrongCode.txt"));
 	}
-	public static char readFile() throws IOException {
+	public static char read() throws IOException {
 		code = br.read();
 		char c;
 		if(code!=-1){
