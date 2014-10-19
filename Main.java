@@ -7,14 +7,18 @@ class Main{
 		ExceptionBrackets e = new ExceptionBrackets();
 		w.ini();
 		r.ini();
-		char c = 'a';
+		char prev = 'a';
+		char post = r.read();
+		char c = post;
 		String s="";
 		while(c!='`'){
-			c = r.readFile();
-			s = format.check(c);
+			post = r.read();
+			s = format.check(prev,c,post);
 			if(c!='`'){
 				w.writeFile(s);
-			}			
+			}
+			prev = c;
+			c = post;			
 		}
 		int count = format.getSpaces();
 		s = e.checkBrackets(count);
