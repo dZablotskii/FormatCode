@@ -1,7 +1,0 @@
-import java.io.*;
-class Input{
-	private BufferedWriter bw;
-	Input(String s) throws IOException{
-		bw = new BufferedWriter(new FileWriter("WrongCode.txt"));
-	}
-}
