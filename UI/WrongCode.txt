@@ -1,0 +1,2 @@
+import java.io.*; class Main{public static void main{int b=12;
+while(b>=100){b++;System.out.println("HelloWorld");}}}
