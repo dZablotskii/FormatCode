@@ -1,4 +1,6 @@
 import java.io.*;
+import UI.ru.omsu.Reader;
+import UI.ru.omsu.Format;
 class Main{
 	public static void main(String[]args)throws IOException{
 		Reader r = new Reader();
