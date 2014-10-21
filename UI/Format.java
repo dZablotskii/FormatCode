@@ -44,12 +44,12 @@ class Format implements InterfaceFormat{
 			result = result+'\n'+c;
 		}else if(c=='\t'){
 			result = result;
+		}else if((c==' ')&&(prev==' ')){
+			result = result;
 		}else {
 			result = result+c;
 		}
-		else if((c==' ')&&(prev==' ')){
-			result = result;
-		}
+		
 		return result;
 	}
 	public int getSpaces(){
