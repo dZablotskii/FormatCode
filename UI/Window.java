@@ -20,7 +20,7 @@ class Window{
 		JButton save = new JButton("Save");
 		saveNameFile = new JTextField(15);
 		JPanel panelSave = new JPanel();
-		JLabel saveFileLabel = new JLabel("Enter namesdfsdf of new file");
+		JLabel saveFileLabel = new JLabel("Enter name of new file");
 		panelSave.add(save);
 		panelSave.add(saveFileLabel);
 		panelSave.setBorder(BorderFactory.createEmptyBorder(0,200,0,0));
