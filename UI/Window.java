@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import ru.omsu.Reader;
+import ru.omsu.Format;
 class Window{
 	private static JTextArea textAreaRead;
 	private static JTextArea textAreaWrite;
