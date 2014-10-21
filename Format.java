@@ -42,6 +42,10 @@ class Format implements InterfaceFormat{
 			comment = false;
 		}else if((c=='/')&(post=='*')) {
 			result = result+'\n'+c;
+		}else if(c=='\t') {
+			result = result;
+		}else if((c==' ')&&(prev==' ')){
+			result = result+c;
 		}else {
 			result = result+c;
 		}
