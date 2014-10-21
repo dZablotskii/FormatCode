@@ -45,7 +45,7 @@ class Format implements InterfaceFormat{
 		}else if(c=='\t') {
 			result = result;
 		}else if((c==' ')&&(prev==' ')){
-			result = result+c;
+			result = result;
 		}else {
 			result = result+c;
 		}
