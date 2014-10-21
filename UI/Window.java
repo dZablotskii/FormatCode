@@ -6,6 +6,7 @@ import java.io.*;
 class Window{
 	private static JTextArea textAreaRead;
 	private static JTextArea textAreaWrite;
+	private static JTextField saveNameFile;
 	public void set(){
 		JFrame frame = new JFrame("Format");
 		frame.setSize(1000,500);
@@ -16,10 +17,20 @@ class Window{
 		JButton format = new JButton("Format");    
 		JButton delete = new JButton("Delete");
 
+		JButton save = new JButton("Save");
+		saveNameFile = new JTextField(15);
+		JPanel panelSave = new JPanel();
+		JLabel saveFileLabel = new JLabel("Enter namesdfsdf of new file");
+		panelSave.add(save);
+		panelSave.add(saveFileLabel);
+		panelSave.setBorder(BorderFactory.createEmptyBorder(0,200,0,0));
+		panelSave.add(saveNameFile);
+
 		JPanel panelButton = new JPanel();
 		panelButton.setLayout(new FlowLayout());
 		panelButton.add(format);
 		panelButton.add(delete);
+		panelButton.add(panelSave);
 
 		textAreaRead = new JTextArea();
 		textAreaRead.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
@@ -38,6 +49,7 @@ class Window{
 
 		format.addActionListener(new FormatActionListener());
 		delete.addActionListener(new DeleteActionListener());
+		save.addActionListener(new SaveActionListener());
 		frame.setVisible(true);	
 		
 	}
@@ -78,6 +90,16 @@ class Window{
 		public void actionPerformed(ActionEvent e){
 			textAreaWrite.setText("");
 			textAreaRead.setText("");
+		}
+	}
+	public class SaveActionListener implements ActionListener{
+		@Override 
+		public void actionPerformed(ActionEvent e){
+			try{
+				BufferedWriter bw = new BufferedWriter(new FileWriter(saveNameFile.getText()));
+				bw.write(textAreaWrite.getText());
+				bw.close();
+			}catch(Exception ec){}
 		}
 	}
 }
