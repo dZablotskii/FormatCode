@@ -1,0 +1,5 @@
+<config>
+	<spaces value="4"></spaces>
+	<inputfile value="WrongCode.txt"></inputfile>
+	<outputfile value="TrueCode.txt"></outputfile>
+</config>
